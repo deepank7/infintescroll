@@ -30,7 +30,7 @@ function App() {
   };
   return (
     <>
-      <input type="text" value={query} onChange={handleSearch}></input>
+      <center><input type="text" value={query} onChange={handleSearch}></input></center>
       {books.map((book, index) => {
         if (books.length === index + 1) {
           return (
