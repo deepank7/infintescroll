@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback } from "react";
 import useBookSearch from "./useBookSearch";
+import Loader from "react-loader-spinner";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -42,7 +43,7 @@ function App() {
           return <div key={book}>{book}</div>;
         }
       })}
-      <div>{loading && "loading..."}</div>
+      <div><center>{loading && <Loader/>}</center></div>
       <div>{error && "error"}</div>
     </>
   );
