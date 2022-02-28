@@ -35,12 +35,12 @@ function App() {
       {books.map((book, index) => {
         if (books.length === index + 1) {
           return (
-            <div ref={lastBookElementRef} key={book}>
+            <div ref={lastBookElementRef} className="books" key={book}>
               {book}
             </div>
           );
         } else {
-          return <div key={book}>{book}</div>;
+          return <div className="books" key={book}>{book}</div>;
         }
       })}
       <div><center>{loading && <Loader/>}</center></div>
